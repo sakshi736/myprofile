@@ -9,6 +9,7 @@ import Qualifications from "../components/Home/Qualifications"
 import ContactMe from "../components/Home/ContactMe"
 import Footer from "../components/Footer"
 import NavBar from "../components/Home/NavBar"
+import Experience from "../components/Home/Experience"
 import { NotificationContext } from "../components/Context/notification"
 import { profileData } from "../data"
 
@@ -54,6 +55,8 @@ const Home: NextPage = () => {
             <Skills {...profileData.skills} />
             {/* Qualifications */}
             <Qualifications {...profileData.qualifications} />
+            {/*Experience*/}
+            <Experience {...profileData.experience}/>
             {/* Contact Me */}
             <ContactMe {...profileData.contactMe} />
           </main>

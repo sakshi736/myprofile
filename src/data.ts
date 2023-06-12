@@ -1,6 +1,7 @@
 import { FooterProps } from "./components/Footer"
 import { AboutProps } from "./components/Home/About"
 import { ContactMeProps } from "./components/Home/ContactMe"
+import { ExperienceProps } from "./components/Home/Experience"
 import { HomeHeadersProps } from "./components/Home/HomeHeaders"
 import { NavBarDataProps } from "./components/Home/NavBar"
 import { QualificationsProps } from "./components/Home/Qualifications"
@@ -16,11 +17,12 @@ export interface profileDataProps {
   navBar: NavBarDataProps
   footer: FooterProps
   homeHeaders: HomeHeadersProps
+  experience:ExperienceProps
 }
 
 export const profileData: profileDataProps = {
   navBar: {
-    title: "Aditya Patil",
+    title: "Sakshi Raut",
     links: [
       {
         name: "Home",
@@ -43,6 +45,11 @@ export const profileData: profileDataProps = {
         icon: "uil:graduation-cap",
       },
       {
+        name: "Experience",
+        href: "/#experience",
+        icon: "uil:briefcase-alt",
+      },
+      {
         name: "Contact Me",
         href: "/#contact",
         icon: "uil:message",
@@ -50,34 +57,53 @@ export const profileData: profileDataProps = {
     ],
   },
   splash: {
-    name: "Aditya",
-    profession: ["an Cloud", "a Web", "a Full-Stack"],
+    name: "Sakshi",
+    profession: [ "a Web", "a Full-Stack","a Front-End"],
     professionSuffix: "Developer",
     subtitle:
-      "Cloud-Native enthusiast and self learner, believes in the power of community.",
+      "Web developer and Designer who believes in project-based learning and self-improvement ",
     coverImgLink: "./assets/img/me.jpg",
     social: [
       {
         icon: "uil:linkedin-alt",
-        href: "https://www.linkedin.com/in/patil11aditya/",
+        href: "https://www.linkedin.com/in/sakshi-raut-a0548a188/",
         name: "LinkedIn",
       },
       {
         icon: "uil:github-alt",
-        href: "https://github.com/solaris7x",
+        href: "https://github.com/sakshi736",
         name: "Github",
       },
       {
         icon: "uil:twitter-alt",
-        href: "https://twitter.com/_solaris7",
+        href: "https://twitter.com/sakshir30228228",
         name: "Twitter",
       },
     ],
   },
   about: {
     introduction:
-      "Hi! 👋 I'm Aditya, A Dev/Ops engineering that aims to provide a seamless journey from development to operations with a strong grasp of Web technologies and Cloud Computing Saas, PaaS, laaS deployment pipelines. Well-versed in Linux-based OS (Debian, Ubuntu, alpine...), containerization technology (Docker + compose), and cloud vendors (GCP, AWS, Azure, Heroku, Netlify) applied to increase software delivery velocity, improve service reliability. Frequently praised as adaptable by my peers and enjoy working among a progressive team. Additionally has a background in Cloud-Native App Development and MERN stack.",
-    resumeLink: "/assets/pdf/Aditya-Resume.pdf",
+      "Hi! 👋 I'm Sakshi, An accomplished full stack developer with a year of professional experience, showcasing expertise in front-end and back-end technologies such as React, Angular, Java, Spring-Boot, as well as database languages like SQL and PostgreSQL. Alongside my technical proficiency, I possess a strong foundation in IoT and machine learning. A notable attribute of mine is my unwavering commitment to continuous self-improvement. As a full stack developer, I excel in collaborating seamlessly with diverse cross-functional teams, encompassing designers, product managers, and fellow developers",
+    resumeLink: "/assets/pdf/Sakshi Raut -Resume.pdf",
+  },
+  experience: {
+    Experiencelists:[
+      {
+        title: "Software Developer",
+        companyName:"Brillio",
+        Workexperience: "Worked on the Project where we developed a training platform using Java , Spring Boot for the backend environment and AngularJS for the frontend.The database was created and integrated using SQL workbench."
+      },
+      {
+        title:"Software Developer Intern",
+        companyName:"Wingrow Agritech",
+        Workexperience:"Designed and enhanced the user experience of website using React JS also collaborated with backend team"
+      },
+      {
+        title:"Machine Learning and Speech Processing Intern",
+        companyName:" Anubhooti Solutions",
+        Workexperience:"Worked on the project where we developed a model to classify gender on basis of voice" 
+      }
+    ]
   },
   skills: {
     skillLists: [
@@ -111,9 +137,14 @@ export const profileData: profileDataProps = {
             icon: "logos:mysql",
           },
           {
-            title: "MongoDB",
-            icon: "logos:mongodb",
+            title: "Jupyter",
+            icon: "logos:jupyter",
           },
+          {
+            title: "SpringBoot",
+            icon: "bxl:spring-boot",
+          }
+
         ],
       },
       {
@@ -126,28 +157,28 @@ export const profileData: profileDataProps = {
             title: "ReactJS",
           },
           {
-            icon: "logos:tailwindcss-icon",
-            title: "TailwindCSS",
+            icon: "devicon:angularjs",
+            title: "AngularJS",
           },
           {
-            title: "NextJS",
-            icon: "logos:nextjs",
+            title: "OpenCV",
+            icon: "logos:opencv",
           },
+          // {
+          //   title: "Pytorch",
+          //   icon: "logos:pytorch",
+          // },
+          // {
+          //   title: "Tensorflow",
+          //   icon: "devicon:tensorflow-wordmark",
+          // },
+          // {
+          //   title: "Pandas",
+          //   icon: "logos:pandas",
+          // },
           {
-            title: "ExpressJS",
-            icon: "logos:express",
-          },
-          {
-            title: "Apollo GraphQL",
-            icon: "logos:graphql",
-          },
-          {
-            title: "Realm",
-            icon: "logos:realm",
-          },
-          {
-            title: "RabbitMQ",
-            icon: "logos:rabbitmq-icon",
+            title: "Matlab",
+            icon: "vscode-icons:file-type-matlab",
           },
         ],
       },
@@ -164,26 +195,26 @@ export const profileData: profileDataProps = {
             icon: "logos:github",
             title: "Github Actions",
           },
-          {
-            title: "Docker",
-            icon: "logos:docker-icon",
-          },
-          {
-            title: "Ansible",
-            icon: "logos:ansible",
-          },
-          {
-            title: "Kubernetes",
-            icon: "logos:kubernetes",
-          },
-          {
-            title: "Cloudflare Workers",
-            icon: "logos:cloudflare",
-          },
-          {
-            title: "Vite",
-            icon: "logos:vitejs",
-          },
+          // {
+          //   title: "Docker",
+          //   icon: "logos:docker-icon",
+          // },
+          // {
+          //   title: "Ansible",
+          //   icon: "logos:ansible",
+          // },
+          // {
+          //   title: "Kubernetes",
+          //   icon: "logos:kubernetes",
+          // },
+          // {
+          //   title: "Cloudflare Workers",
+          //   icon: "logos:cloudflare",
+          // },
+          // {
+          //   title: "Vite",
+          //   icon: "logos:vitejs",
+          // },
         ],
       },
     ],
@@ -196,19 +227,19 @@ export const profileData: profileDataProps = {
         items: [
           {
             title:
-              "BTech Computer Science & Engineering (Cloud Technology & Information Security)",
-            subtitle: "Jain Deemed-to-be University",
+              "B-Tech in Electronics and Telecommunication Engineering",
+            subtitle: "Vishwakarma Institute of Technology,Pune",
             dateString: "2018 - 2022",
           },
           {
-            title: "12th - PCM-CS",
-            subtitle: "Muljibhai Mehta International School, Virar",
-            dateString: "2016 - 2017",
+            title: "Higher Secondary Education (State Board)",
+            subtitle: "Tarkunde Dharampeth Junior College,Nagpur",
+            dateString: "2017 - 2018",
           },
           {
-            title: "10th - CBSE",
-            subtitle: "Muljibhai Mehta International School, Virar",
-            dateString: "2014 - 2015",
+            title: "Secondary School Education (State Board)",
+            subtitle: "Christanand School ,Brahmapuri",
+            dateString: "2015 - 2016",
           },
         ],
       },
@@ -219,24 +250,24 @@ export const profileData: profileDataProps = {
       {
         icon: "uil:envelope",
         title: "Email",
-        subtitle: "patil11aditya@gmail.com",
-        link: "mailto:patil11aditya@gmail.com",
+        subtitle: "sakshiraut736@gmail.com",
+        link: "mailto:sakshiraut736@gmail.com",
       },
       {
         icon: "uil:twitter",
         title: "Twitter",
-        subtitle: "@_solaris7",
-        link: "https://twitter.com/_solaris7",
+        subtitle: "sakshir30228228",
+        link: "https://twitter.com/sakshir30228228",
       },
       {
         icon: "uil:location-point",
         title: "Location",
-        subtitle: "Mumbai, India",
+        subtitle: "Nagpur, India",
       },
     ],
   },
   footer: {
-    name: "Aditya Patil",
+    name: "Sakshi Raut",
     subtitle: "Software Developement Engineer",
     links: [
       {
@@ -245,7 +276,7 @@ export const profileData: profileDataProps = {
       },
       {
         title: "Projects",
-        link: "https://github.com/solaris7x?tab=repositories",
+        link: "https://github.com/sakshi736?tab=repositories",
       },
       {
         title: "Contact Me",
@@ -255,18 +286,18 @@ export const profileData: profileDataProps = {
     social: [
       {
         icon: "uil:linkedin-alt",
-        link: "https://www.linkedin.com/in/patil11aditya/",
+        link: "https://www.linkedin.com/in/sakshi-raut-a0548a188/",
         name: "LinkedIn",
+      },
+      { 
+        icon: "uil:github-alt",
+        link: "https://github.com/sakshi736",
+        name: "Github",
       },
       {
         icon: "uil:twitter-alt",
-        link: "https://twitter.com/_solaris7",
+        link: "https://twitter.com/sakshir30228228",
         name: "Twitter",
-      },
-      {
-        icon: "uil:github",
-        link: "https://github.com/solaris7x",
-        name: "Github",
       },
     ],
   },
