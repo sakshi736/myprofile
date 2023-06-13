@@ -8,11 +8,11 @@ export default function Document() {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta
           name="description"
-          content="Aditya is Dev/Ops Engineer and Open-Source enthusiast."
+          content="Sakshi is Full stack developer"
         />
-        <meta property="og:title" content="Aditya Patil" />
+        <meta property="og:title" content="Sakshi Raut" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Aditya Patil" />
+        <meta name="twitter:title" content="Sakshi Raut" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
       <body>

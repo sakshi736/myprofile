@@ -302,7 +302,7 @@ export const profileData: profileDataProps = {
     ],
   },
   homeHeaders: {
-    title: "Aditya Patil",
-    description: "Aditya is Web Developer and Cloud-Native enthusiast",
+    title: "Sakshi Raut",
+    description: "Sakshi is Full Stack Developer and Machine Learning Enthusiast",
   },
 }
