@@ -84,7 +84,7 @@ export const profileData: profileDataProps = {
   about: {
     introduction:
       "Hi! 👋 I'm Sakshi, An accomplished full stack developer with a year of professional experience, showcasing expertise in front-end and back-end technologies such as React, Angular, Java, Spring-Boot, as well as database languages like SQL and PostgreSQL. Alongside my technical proficiency, I possess a strong foundation in IoT and machine learning. A notable attribute of mine is my unwavering commitment to continuous self-improvement. As a full stack developer, I excel in collaborating seamlessly with diverse cross-functional teams, encompassing designers, product managers, and fellow developers",
-    resumeLink: "/assets/pdf/Sakshi Raut -Resume.pdf",
+    resumeLink: "assets/pdf/Sakshi Raut -Resume.pdf",
   },
   experience: {
     Experiencelists:[
