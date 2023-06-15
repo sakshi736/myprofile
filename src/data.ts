@@ -89,19 +89,31 @@ export const profileData: profileDataProps = {
   experience: {
     Experiencelists:[
       {
-        title: "Software Developer",
+        title: "Software Development Engineer",
         companyName:"Brillio",
-        Workexperience: "Worked on the Project where we developed a training platform using Java , Spring Boot for the backend environment and AngularJS for the frontend.The database was created and integrated using SQL workbench."
+        Workexperience: [
+          {details: "Developed a cutting edge training platform using Java and Spring Boot for the backend environment and AngularJS for the frontend."},
+          {details:"Integrated database using SQL workbench and REST API services resulting in a good amount of increase in user engagement"},
+          {details:"Engaged with the leadership team of organisation for business research and growth of the company"},
+          {details:"During my tenure as a Frontend engineer on the Sun Pharma project, I took charge of developing intricate components for various websites and implementing them using the AEM architecture."},
+          {details:"Additionally, successfully tackled user experience-related challenges by resolving bugs and issues, leading to enhanced user management and increased user engagement."},
+        ]
       },
       {
         title:"Software Developer Intern",
         companyName:"Wingrow Agritech",
-        Workexperience:"Designed and enhanced the user experience of website using React JS also collaborated with backend team"
+        Workexperience: [
+          {details:"Designed and enhanced the user experience of website using React JS also collaborated with backend team."},
+          {details:"Developed the Progressive Web App (PWA) architecture for the website, resulting in a 30% increase in user engagement of farmers and vendors."},
+        ]
       },
       {
         title:"Machine Learning and Speech Processing Intern",
         companyName:" Anubhooti Solutions",
-        Workexperience:"Worked on the project where we developed a model to classify gender on basis of voice" 
+        Workexperience:[
+          {details:"Developed a speech recognition model using Machine Learning and Speech Processing for Gender Identification of the speaker."},  
+          {details:"The model was trained on the Kaggle dataset and achieved an accuracy of 94% on the test data."},   
+        ] 
       }
     ]
   },
