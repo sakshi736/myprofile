@@ -4,54 +4,82 @@ import { Icon } from "@iconify/react"
 export interface FooterProps {
   name: string
   subtitle: string
-  links: {
-    link: string
-    title: string
-  }[]
-  social: {
-    link: string
-    icon: string
-    name: string
-  }[]
+  links: { link: string; title: string }[]
+  social: { link: string; icon: string; name: string }[]
 }
 
 const Footer = (props: FooterProps) => {
   return (
-    <footer className="bg-violet-500 text-white dark:text-[wheat] py-12 px-2 mt-10">
-      <div className="flex flex-col md:grid grid-rows-3 md:grid-rows-1 md:grid-cols-3 gap-4 mx-[10%]">
-        {/* Footer Name */}
-        <div className="text-center md:text-left">
-          <h1 className="text-4xl font-bold">{props.name}</h1>
-          <div className="my-4">{props.subtitle}</div>
+    <footer style={{
+      borderTop: "1px solid rgba(255,255,255,0.07)",
+      padding: "3rem 2rem",
+      marginTop: "4rem",
+    }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr auto auto", gap: "3rem", alignItems: "center", flexWrap: "wrap" as const, marginBottom: "2rem" }} className="grid-cols-1 md:grid-cols-3">
+          {/* Brand */}
+          <div>
+            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 16, color: "#e8e6f0", marginBottom: 6 }}>
+              <span style={{ color: "#7c6af7" }}>{"<"}</span>
+              {props.name}
+              <span style={{ color: "#7c6af7" }}>{"/>"}</span>
+            </div>
+            <div style={{ fontSize: 12, color: "rgba(232,230,240,0.35)", fontFamily: "'JetBrains Mono', monospace" }}>
+              {props.subtitle}
+            </div>
+            <div style={{ marginTop: 8, display: "inline-flex", alignItems: "center", gap: 6,
+              padding: "4px 10px", borderRadius: 20,
+              background: "linear-gradient(90deg, rgba(124,106,247,0.12), rgba(99,214,196,0.12))",
+              border: "1px solid rgba(124,106,247,0.2)",
+              fontSize: 10, fontFamily: "'JetBrains Mono', monospace", color: "#c4bfff",
+            }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#63d6c4", boxShadow: "0 0 4px #63d6c4" }} />
+              AI-Augmented · Claude (Anthropic)
+            </div>
+          </div>
+
+          {/* Links */}
+          <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", gap: "1.5rem" }}>
+            {props.links.map((link, i) => (
+              <li key={i}>
+                <a href={link.link} style={{
+                  fontSize: 13, color: "rgba(232,230,240,0.4)", textDecoration: "none",
+                  fontFamily: "'JetBrains Mono', monospace", transition: "color 0.2s",
+                }}
+                onMouseEnter={e => e.currentTarget.style.color = "#e8e6f0"}
+                onMouseLeave={e => e.currentTarget.style.color = "rgba(232,230,240,0.4)"}
+                >
+                  {link.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          {/* Social */}
+          <div style={{ display: "flex", gap: "0.75rem" }}>
+            {props.social.map((s, i) => (
+              <Link key={i} href={s.link}>
+                <a target="_blank" aria-label={s.name} style={{
+                  width: 36, height: 36, borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center",
+                  border: "1px solid rgba(255,255,255,0.08)", color: "rgba(232,230,240,0.4)", fontSize: 16,
+                  textDecoration: "none", transition: "all 0.2s",
+                }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = "rgba(124,106,247,0.4)"; e.currentTarget.style.color = "#7c6af7" }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)"; e.currentTarget.style.color = "rgba(232,230,240,0.4)" }}
+                >
+                  <Icon icon={s.icon} />
+                </a>
+              </Link>
+            ))}
+          </div>
         </div>
 
-        {/* Footer Links */}
-        <ul className="flex gap-4 justify-center">
-          {props.links.map((link, index) => (
-            <li key={index}>
-              <a href={link.link} className="">
-                {link.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        {/* Footer Social */}
-        <div className="flex gap-4 justify-center md:justify-end text-xl">
-          {props.social.map((social, index) => (
-            <Link key={index} href={social.link}>
-              <a target="_blank" className="" aria-label={social.name}>
-                <Icon icon={social.icon} className="" />
-              </a>
-            </Link>
-          ))}
+        <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: "1.5rem", textAlign: "center" }}>
+          <span style={{ fontSize: 12, color: "rgba(232,230,240,0.25)", fontFamily: "'JetBrains Mono', monospace" }}>
+            © {props.name} · Built with Next.js + Tailwind CSS · AI-assisted with Claude
+          </span>
         </div>
       </div>
-
-      {/* Copyright */}
-      <p className="my-4 text-center text-gray-700">
-        &#169; {props.name}. All rights reserved
-      </p>
     </footer>
   )
 }
