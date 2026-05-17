@@ -194,10 +194,10 @@ const Splash = (props: SplashProps) => {
 
               {/* Terminal body */}
               <div style={{ padding: "1.5rem", minHeight: 280 }}>
-                {termLines.map((line, i) => (
+                {termLines.filter(Boolean).map((line, i) => (
                   <div key={i} style={{
                     fontSize: 13, lineHeight: 1.8,
-                    color: line.startsWith("$") ? "#63d6c4" : line.startsWith(">") ? "rgba(232,230,240,0.7)" : "#e8e6f0",
+                    color: line[0] === "$" ? "#63d6c4" : line[0] === ">" ? "rgba(232,230,240,0.7)" : "#e8e6f0",
                     animation: "fadeUp 0.3s ease",
                   }}>
                     {line}
